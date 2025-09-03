@@ -5,7 +5,7 @@ import { AdminController } from "./routes/admin.routes";
 import express from "express";
 
 async function main() {
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || 8000;
 
   try {
     console.log("Database connected!"); 
