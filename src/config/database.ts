@@ -1,6 +1,6 @@
 import "reflect-metadata";
 
-const { DatabaseSync } = require("sqlite");
+const { DatabaseSync } = require("node:sqlite");
 const database = new DatabaseSync("db.sqlite");
 
 database.exec(`
@@ -21,28 +21,22 @@ database.exec(`
 `);
 
 const insertLetter = database.prepare(
-  "INSERT INTO letter (content, addressedTo, hidden) VALUES (?, ?, ?)" // content, addressedTo, hidden
+  "INSERT INTO letter (content, addressedTo, hidden) VALUES (?, ?, ?)"
 );
 
-const getAllLetters = database.prepare(
-  "SELECT * FROM letter" // email, password, role
-);
+const getAllLetters = database.prepare("SELECT * FROM letter");
 
 const getAllLettersAddressedTo = database.prepare(
-  "SELECT * FROM letter WHERE addressedTo = ? AND hidden = 0;" // addressedTo
+  "SELECT * FROM letter WHERE addressedTo = ? AND hidden = 0;"
 );
 
-const deleteLetter = database.prepare(
-  "DELETE FROM letter WHERE id  = ?" // id
-);
+const deleteLetter = database.prepare("DELETE FROM letter WHERE id  = ?");
 
 const insertAdmin = database.prepare(
-  "INSERT INTO admin (email, password) VALUES (?, ?)" // email, password
+  "INSERT INTO admin (email, password) VALUES (?, ?)"
 );
 
-const deleteAdmin = database.prepare(
-  "DELETE FROM admin WHERE email = ?" // email
-);
+const deleteAdmin = database.prepare("DELETE FROM admin WHERE email = ?");
 
 export {
   database,
