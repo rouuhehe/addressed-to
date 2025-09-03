@@ -25,7 +25,7 @@ export async function login(email: string, password: string) {
     const valid = await bcrypt.compare(password, admin.password);
     if (!valid) throw Error("Passwords don't match!");
 
-    const token = jwt.sign({ sub: admin.id }, JWT_SECRET || "", {
+    const token = jwt.sign({ sub: admin.id }, JWT_SECRET || "pepito_clavo_un_clavito", {
       expiresIn: "2h",
     });
     return token;

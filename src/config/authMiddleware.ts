@@ -11,7 +11,7 @@ export class AuthMiddleware implements ExpressMiddlewareInterface {
     }
 
     try {
-      const payload = jwt.verify(token, process.env.JWT_SECRET || "");
+      const payload = jwt.verify(token, process.env.JWT_SECRET || "pepito_clavo_un_clavito");
       req.user = payload; 
       next();
     } catch (err) {
