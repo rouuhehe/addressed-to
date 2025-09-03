@@ -5,7 +5,7 @@ import {
   getAllLettersAddressedTo,
 } from "../config/database";
 
-@Controller("/")
+@Controller()
 export class LetterController {
   @Post("/new")
   async postLetter(@Body() body: { addressedTo: string; content: string }) {
