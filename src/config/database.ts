@@ -1,7 +1,7 @@
 import "reflect-metadata";
+import Database from "better-sqlite3";
 
-const { DatabaseSync } = require("node:sqlite");
-const database = new DatabaseSync("db.sqlite");
+const database = new Database("db.sqlite");
 
 database.exec(`
     CREATE TABLE IF NOT EXISTS admin(

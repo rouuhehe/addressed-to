@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { database, insertAdmin } from "../config/database";
+import { Admin } from "../models/admin.entity";
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -17,7 +18,7 @@ export async function register(email: string, password: string) {
 export async function login(email: string, password: string) {
   try {
     const stmt = database.prepare("SELECT * FROM admin WHERE email = ?");
-    const admin = stmt.get(email);
+    const admin = stmt.get(email) as Admin | undefined;
 
     if (!admin) throw Error("Email is not registered!");
 
