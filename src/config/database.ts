@@ -1,21 +1,6 @@
 import "reflect-metadata";
-// import { DataSource } from "typeorm"
-// import { Admin } from "../models/admin.entity"
-// import { Letter } from "../models/letter.entity"
 
-// Temporarily commenting out TypeORM due to native module issues
-// export const DataBaseSource = new DataSource({
-//   type: "sqlite",
-//   database: "db.sqlite",
-//   synchronize: true,
-//   logging: true,
-//   entities: [Admin, Letter],
-//   migrations: [],
-//   subscribers: []
-// })
-
-// Using Node.js built-in SQLite instead
-const { DatabaseSync } = require("node:sqlite");
+const { DatabaseSync } = require("sqlite");
 const database = new DatabaseSync("db.sqlite");
 
 database.exec(`

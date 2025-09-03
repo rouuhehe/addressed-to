@@ -21,5 +21,3 @@ Node.js Api REST inspired by `THE UNSENT PROJECT`, click [here](https://theunsen
 | id        | UUID   | Unique identifier |
 | email     | String | Login email       |
 | password  | String | Hashed password   |
-
-# addressed-to
