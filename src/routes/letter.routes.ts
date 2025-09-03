@@ -1,6 +1,5 @@
 import { Body, Controller, Get, Post, QueryParam } from "routing-controllers";
 import {
-  database,
   insertLetter,
   getAllLetters,
   getAllLettersAddressedTo,
