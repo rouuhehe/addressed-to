@@ -20,7 +20,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\":\"legalcheck666@gmail.com\",\n    \"password\":\"123\"\n}",
+					"raw": "{\n    \"email\":\"yaritza.lopez1@utec.edu.pe\",\n    \"password\":\"123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -28,13 +28,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://100.26.197.48:8000/admin/login",
+					"raw": "http://{{ path }}:8000/admin/login",
 					"protocol": "http",
 					"host": [
-						"100",
-						"26",
-						"197",
-						"48"
+						"{{ path }}"
 					],
 					"port": "8000",
 					"path": [
@@ -115,6 +112,75 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTc1Njg2MjE5NCwiZXhwIjoxNzU2ODY5Mzk0fQ.JIJS6l4OXazs29fz9_ieHs_0LOKIkSIlTpZd2wtvpLc\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTc1Njg2MTMxOCwiZXhwIjoxNzU2ODY4NTE4fQ.wQpZR1x0Gsiy5WD__Xxa9emQSAWE7U_7aczPiHsaQJE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"yaritza.lopez1@utec.edu.pe\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ path }}:8000/admin/login",
+							"protocol": "http",
+							"host": [
+								"{{ path }}"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"97-fcFrLbNCEdH5l57wLYiKy4gbEG4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 01:53:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImlhdCI6MTc1Njg2NDQzMCwiZXhwIjoxNzU2ODcxNjMwfQ.omLxSbT_5DrCtc6oRLWQ4ja-41zwavFQvBq-ltS06SQ\"\n}"
 				}
 			]
 		},
@@ -133,13 +199,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://100.26.197.48:8000/new",
+					"raw": "http://{{ path }}:8000/new",
 					"protocol": "http",
 					"host": [
-						"100",
-						"26",
-						"197",
-						"48"
+						"{{ path }}"
 					],
 					"port": "8000",
 					"path": [
@@ -149,7 +212,7 @@
 			},
 			"response": [
 				{
-					"name": "New Letter",
+					"name": "New Request",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -163,13 +226,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://100.26.197.48:8000/new",
+							"raw": "http://{{ path }}:8000/new",
 							"protocol": "http",
 							"host": [
-								"100",
-								"26",
-								"197",
-								"48"
+								"{{ path }}"
 							],
 							"port": "8000",
 							"path": [
@@ -179,7 +239,7 @@
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": null,
+					"_postman_previewlanguage": "",
 					"header": [
 						{
 							"key": "X-Powered-By",
@@ -199,7 +259,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Sep 2025 01:11:12 GMT"
+							"value": "Wed, 03 Sep 2025 01:54:07 GMT"
 						},
 						{
 							"key": "Connection",
@@ -241,7 +301,7 @@
 			},
 			"response": [
 				{
-					"name": "New Letter 2",
+					"name": "New Post 2",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -250,13 +310,10 @@
 							"raw": "{ \n    \"addressedTo\": \"Janeth\",\n    \"content\": \"i wanna see ya soon, mom!\" \n}"
 						},
 						"url": {
-							"raw": "http://100.26.197.48:8000/new",
+							"raw": "http://{{ path }}:8000/new",
 							"protocol": "http",
 							"host": [
-								"100",
-								"26",
-								"197",
-								"48"
+								"{{ path }}"
 							],
 							"port": "8000",
 							"path": [
@@ -266,7 +323,7 @@
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": null,
+					"_postman_previewlanguage": "",
 					"header": [
 						{
 							"key": "X-Powered-By",
@@ -286,7 +343,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Sep 2025 01:13:17 GMT"
+							"value": "Wed, 03 Sep 2025 01:54:28 GMT"
 						},
 						{
 							"key": "Connection",
@@ -309,7 +366,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\":\"yaritza.lopez@utec.edu.pe\",\n    \"password\":\"123\"\n}",
+					"raw": "{\n    \"email\":\"yaritza.lopez1@utec.edu.pe\",\n    \"password\":\"123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -317,13 +374,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://100.26.197.48:8000/admin/register",
+					"raw": "http://{{ path }}:8000/admin/register",
 					"protocol": "http",
 					"host": [
-						"100",
-						"26",
-						"197",
-						"48"
+						"{{ path }}"
 					],
 					"port": "8000",
 					"path": [
@@ -398,6 +452,69 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"msg\": \"Admin was created successfully\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"yaritza.lopez1@utec.edu.pe\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ path }}:8000/admin/register",
+							"protocol": "http",
+							"host": [
+								"{{ path }}"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-w0eI6Ez8ZDxisylizFjRf6bpgWo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 01:53:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Admin was created successfully\"\n}"
 				}
 			]
 		},
@@ -440,13 +557,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://100.26.197.48:8000/admin/posts/info",
+							"raw": "http://{{ path }}:8000/admin/posts/info",
 							"protocol": "http",
 							"host": [
-								"100",
-								"26",
-								"197",
-								"48"
+								"{{ path }}"
 							],
 							"port": "8000",
 							"path": [
@@ -474,11 +588,11 @@
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"159-UhBqXg01gOU5LHPgSCiDeCSYbpg\""
+							"value": "W/\"159-CiqVwTDkwqS4POYuwGvCTl9uWRA\""
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Sep 2025 01:30:40 GMT"
+							"value": "Wed, 03 Sep 2025 01:55:08 GMT"
 						},
 						{
 							"key": "Connection",
@@ -490,65 +604,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"id\": 1,\n        \"content\": \"pretty little boi (he's my cat btw)\",\n        \"addressedTo\": \"Rico\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 2,\n        \"content\": \"i wanna see ya soon, mom!\",\n        \"addressedTo\": \"Janeth\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 4,\n        \"content\": \"Omg i hate you so much youre so lame!!!!!! (this is just and example, i am yaritza and i do not think that of myself)\",\n        \"addressedTo\": \"Yaritza\",\n        \"hidden\": 0\n    }\n]"
-				},
-				{
-					"name": "Get All Posts As Admin",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://100.26.197.48:8000/admin/posts/info",
-							"protocol": "http",
-							"host": [
-								"100",
-								"26",
-								"197",
-								"48"
-							],
-							"port": "8000",
-							"path": [
-								"admin",
-								"posts",
-								"info"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "345"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"159-8bM4n+2hc+F7fL3xSKghdxBi87g\""
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 03 Sep 2025 01:31:35 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "[\n    {\n        \"id\": 1,\n        \"content\": \"pretty little boi (he's my cat btw)\",\n        \"addressedTo\": \"Rico\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 2,\n        \"content\": \"i wanna see ya soon, mom!\",\n        \"addressedTo\": \"Janeth\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 4,\n        \"content\": \"Omg i hate you so much youre so lame!!!!!! (this is just and example, i am yaritza and i do not think that of myself)\",\n        \"addressedTo\": \"Yaritza\",\n        \"hidden\": 1\n    }\n]"
+					"body": "[\n    {\n        \"id\": 5,\n        \"content\": \"pretty little boi (he's my cat btw)\",\n        \"addressedTo\": \"Rico\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 6,\n        \"content\": \"i wanna see ya soon, mom!\",\n        \"addressedTo\": \"Janeth\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 7,\n        \"content\": \"Omg i hate you so much youre so lame!!!!!! (this is just and example, i am yaritza and i do not think that of myself)\",\n        \"addressedTo\": \"Yaritza\",\n        \"hidden\": 0\n    }\n]"
 				}
 			]
 		},
@@ -629,6 +685,71 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"msg\": \"Visibility updated successfully\",\n    \"post\": {\n        \"id\": 4,\n        \"content\": \"Omg i hate you so much youre so lame!!!!!! (this is just and example, i am yaritza and i do not think that of myself)\",\n        \"addressedTo\": \"Yaritza\",\n        \"hidden\": 1\n    }\n}"
+				},
+				{
+					"name": "Change Post Visibility",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hidden\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ path }}:8000/admin/post/7/visibility",
+							"protocol": "http",
+							"host": [
+								"{{ path }}"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"post",
+								"7",
+								"visibility"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"de-jwJSd6hDC1oZ4t0WOk2x2FzxvGM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 01:55:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Visibility updated successfully\",\n    \"post\": {\n        \"id\": 7,\n        \"content\": \"Omg i hate you so much youre so lame!!!!!! (this is just and example, i am yaritza and i do not think that of myself)\",\n        \"addressedTo\": \"Yaritza\",\n        \"hidden\": 1\n    }\n}"
 				}
 			]
 		},
@@ -648,13 +769,10 @@
 					"raw": "{ \n    \"addressedTo\": \"Yaritza\",\n    \"content\": \"Omg i hate you so much youre so lame!!!!!! (this is just and example, i am yaritza and i do not think that of myself)\" \n}"
 				},
 				"url": {
-					"raw": "http://100.26.197.48:8000/new",
+					"raw": "http://{{ path }}:8000/new",
 					"protocol": "http",
 					"host": [
-						"100",
-						"26",
-						"197",
-						"48"
+						"{{ path }}"
 					],
 					"port": "8000",
 					"path": [
@@ -728,6 +846,69 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"msg\": \"Letter created successfully\"\n}"
+				},
+				{
+					"name": "New Letter  3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTc1Njg2MTMxOCwiZXhwIjoxNzU2ODY4NTE4fQ.wQpZR1x0Gsiy5WD__Xxa9emQSAWE7U_7aczPiHsaQJE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"addressedTo\": \"Yaritza\",\n    \"content\": \"Omg i hate you so much youre so lame!!!!!! (this is just and example, i am yaritza and i do not think that of myself)\" \n}"
+						},
+						"url": {
+							"raw": "http://{{ path }}:8000/new",
+							"protocol": "http",
+							"host": [
+								"{{ path }}"
+							],
+							"port": "8000",
+							"path": [
+								"new"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-LmBg9i4y7dnq3rPHyI+TdLiaoYE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 01:54:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Letter created successfully\"\n}"
 				}
 			]
 		},
@@ -739,18 +920,15 @@
 			},
 			"response": [
 				{
-					"name": "Get All Letters As User",
+					"name": "New Request",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://100.26.197.48:8000/",
+							"raw": "http://{{ path }}:8000/",
 							"protocol": "http",
 							"host": [
-								"100",
-								"26",
-								"197",
-								"48"
+								"{{ path }}"
 							],
 							"port": "8000",
 							"path": [
@@ -760,7 +938,7 @@
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": null,
+					"_postman_previewlanguage": "",
 					"header": [
 						{
 							"key": "X-Powered-By",
@@ -776,11 +954,11 @@
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"ab-9nKT2uDNLWUsXDZeSOoX0/qevDc\""
+							"value": "W/\"ab-Z9wg+E/gNwy57sh1v5ZIGAgj1nQ\""
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Sep 2025 01:23:53 GMT"
+							"value": "Wed, 03 Sep 2025 01:56:01 GMT"
 						},
 						{
 							"key": "Connection",
@@ -792,43 +970,64 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"id\": 1,\n        \"content\": \"pretty little boi (he's my cat btw)\",\n        \"addressedTo\": \"Rico\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 2,\n        \"content\": \"i wanna see ya soon, mom!\",\n        \"addressedTo\": \"Janeth\",\n        \"hidden\": 0\n    }\n]"
+					"body": "[\n    {\n        \"id\": 5,\n        \"content\": \"pretty little boi (he's my cat btw)\",\n        \"addressedTo\": \"Rico\",\n        \"hidden\": 0\n    },\n    {\n        \"id\": 6,\n        \"content\": \"i wanna see ya soon, mom!\",\n        \"addressedTo\": \"Janeth\",\n        \"hidden\": 0\n    }\n]"
 				}
 			]
 		},
 		{
 			"name": "Delete Letter",
 			"request": {
-				"method": "GET",
-				"header": []
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTc1Njg2MjE5NCwiZXhwIjoxNzU2ODY5Mzk0fQ.JIJS6l4OXazs29fz9_ieHs_0LOKIkSIlTpZd2wtvpLc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{ path }}:8000/admin/posts/7/delete",
+					"protocol": "http",
+					"host": [
+						"{{ path }}"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"posts",
+						"7",
+						"delete"
+					]
+				}
 			},
 			"response": [
 				{
-					"name": "Delete Letter",
+					"name": "New Request",
 					"originalRequest": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://100.26.197.48:8000/admin/posts/3/delete",
+							"raw": "http://{{ path }}:8000/admin/posts/7/delete",
 							"protocol": "http",
 							"host": [
-								"100",
-								"26",
-								"197",
-								"48"
+								"{{ path }}"
 							],
 							"port": "8000",
 							"path": [
 								"admin",
 								"posts",
-								"3",
+								"7",
 								"delete"
 							]
 						}
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": null,
+					"_postman_previewlanguage": "",
 					"header": [
 						{
 							"key": "X-Powered-By",
@@ -848,7 +1047,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 03 Sep 2025 01:28:51 GMT"
+							"value": "Wed, 03 Sep 2025 01:56:37 GMT"
 						},
 						{
 							"key": "Connection",
@@ -863,6 +1062,23 @@
 					"body": "{\n    \"msg\": \"Letter was deleted successfully\"\n}"
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": " baseURL ",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": " Path ",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": " path ",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
